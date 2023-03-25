@@ -59,6 +59,7 @@ int pow_CRT(int a, int k, int n) {
         //3. Calculate M[i]^-1 mod m[i] => ExtendedEuclid(m[i], M / m[i])
         //4. Calculate each c[i] = M[i] x (M[i]^-1 mod m[i]), a[i] = A mod m[i], item = a[i] * c[i]
         int Mi = n / m[i];
+        cout << power(a, k, m[i])  << " " << Mi << " " << ExtendedEuclid(m[i], Mi) << endl; 
         res += power(a, k, m[i]) * Mi * ExtendedEuclid(m[i], Mi);
     }
     return res % n;
