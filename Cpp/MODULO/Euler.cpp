@@ -33,7 +33,10 @@ int euler_pow(int a, int m, int n) {
         return power(a, m % phi(n), n);
     }
     int temp = phi(n) + 1;
-    return power(a, m / temp + m % temp, n);
+    while(m >= temp) {
+        m = m / temp + m % temp;
+    }
+    return power(a, m, n);
 }
 main() {
     int a = 23, m = 3885, n = 395;
