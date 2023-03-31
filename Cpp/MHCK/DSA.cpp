@@ -43,7 +43,7 @@ int ExtendedEuclid(int b, int m) {
 }
 
 main() {
-    int p = 31, q = 5, h = 23, xA = 3, k = 6, HM = 9;
+    int p = 59, q = 29, h = 3, xA = 19, k = 25, HM = 7;
 
     // Khoa cong khai cua An yA = ?
     int g = power(h, (p - 1) / q, p);
@@ -67,18 +67,18 @@ main() {
     int w = ExtendedEuclid(s, q);
     int u1 = (HM * w) % q;
     int u2 = (r * w) % q;
-    int v = (power(g, u1, p) * power(yA, u2, p)) % p % q;
+    int v = ((power(g, u1, p) * power(yA, u2, p)) % p) % q;
     cout << "Xac minh chu ky so: " << endl;
     cout << "w = s^(-1) mod q = " << s << "^(-1) mod " << q << " = " << w << endl; 
     cout << "u1 = (H(M) * w) mod q = (" << HM << " * " << w << ") mod " << q << " = " << u1 << endl;
     cout << "u2 = (r * w) mod q = (" << r << " * " << w << ") mod " << q << " = " << u2 << endl;
     cout << "v = [(g^u1 * yA^u2) mod p] mod q = [(" << g << "^" << u1 << " * " << yA << "^" << u2 << ") mod " << p << "] mod " << q << " = " << v << endl;
 
-    if (v == s) {
-        cout << "v = s = " << v << endl;
+    if (v == r) {
+        cout << "v = r = " << v << endl;
         cout << "Chu ky dung !";
     } else {
-        cout << "v != s" << endl << "Sai !"; 
+        cout << "v != r" << endl << "Sai !"; 
     }
 
 
