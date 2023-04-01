@@ -3,7 +3,6 @@
 #define MAIN_FUNC_H
 #define int long long
 #include "Gen_Key.h"
-#define int long long
 
 unsigned int IP(unsigned int x) {
     unsigned int y = 0;
