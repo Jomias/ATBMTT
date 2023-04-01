@@ -15,16 +15,15 @@ string rail_fence_encrypt(string M, int K) {
     }
     for (int i = 0; i < K; ++i) {
         for (int j = 0; j < col_num; ++j) {
-            //cout << rails[i][j] << " ";
+            cout << rails[i][j] << " ";
             if(rails[i][j] != '.') {
                 C += rails[i][j];
             }
         }
-        //cout << endl;
+        cout << endl;
     }
     return C;
 }
-
 
 string rail_fence_decrypt(string C, int K) {
     string M = "";
