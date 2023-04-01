@@ -36,7 +36,7 @@ main() {
     // ý b tìm yB = a^(xB) mod q, khóa phiên K = yB^(xA) mod q
     int yB = cal_y(a, xB, q);
     cout << "yB = " << a << "^(" << xB << ") mod " << q << " = " << yB << endl;
-    K = cal_K(yA, xB, q);
+    K = cal_K(yB, xA, q);
     cout << "Khoa phien K = yB^(xA) mod q = " << yB << "^(" << xA << ") mod " << q << " = " << K << endl;
 
     return 0;
