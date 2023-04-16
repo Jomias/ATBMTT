@@ -55,7 +55,7 @@ main() {
     int M_2 = (C2 * ExtendedEuclid(K, q)) % q;
     cout << "Cach A giai ma C, M': " << endl;
     cout << "K = (C1)^(xA) mod q = " << C1 << "^" << xA << " mod " << q << " = " << K << endl;;
-    cout << "M' = (C2 * K^(-1)) mod q = [(C2 mod q) * (K^(-1) mod q)] mod q = " << C2 << endl;
+    cout << "M' = (C2 * K^(-1)) mod q = [(C2 mod q) * (K^(-1) mod q)] mod q = " << M_2 << endl;
 
     return 0;
 
